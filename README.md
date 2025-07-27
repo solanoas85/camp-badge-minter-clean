@@ -13,8 +13,6 @@ Mint gratuito de NFTs com o Origin SDK da Camp Network.
 - Frontend: HTML/JS
 - Deploy: Basecamp Testnet
 
-## 🎥 Vídeo de Demonstração
-https://www.youtube.com/watch?v=SEULINK
 
 ## 🧠 Objetivo
 Demonstrar como qualquer usuário pode mintar gratuitamente um NFT usando o Origin SDK, promovendo a ideia de identidade on-chain para builders da Camp Network.
