@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Camp Badge Minter</title>
-</head>
-<body>
-  <h1>Camp Badge Minter</h1>
-  <p>Conecte sua carteira e clique no botão para mintar seu badge!</p>
-  <button onclick="mintBadge()">Claim Badge</button>
+  <head>
+    <title>Camp Badge Minter</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🏕️ Camp Badge Minter</h1>
+    <p>Conecte sua carteira e clique no botão para mintar seu badge!</p>
+    <button onclick="mintBadge()">Claim Badge</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/@campnetwork/origin-sdk"></script>
-  <script>
-    async function mintBadge() {
-      // Lógica do SDK pode ser integrada aqui
-      alert("Função de mint ainda será conectada ao contrato.");
-    }
-  </script>
-</body>
+    <script>
+      const contractAddress = "0x2c2323218e6b194995582B90027Bd8474606d66F";
+      const abi = [
+        {
+          "inputs": [],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        }
+      ];
+
+      async function mintBadge() {
+        if (typeof window.ethereum === 'undefined') {
+          alert('MetaMask não encontrada!');
+          return;
+        }
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(contractAddress, abi, signer);
+
+        try {
+          const tx = await contract.mint({ value: ethers.utils.parseEther("0.0001") });
+          alert("Transação enviada: " + tx.hash);
+        } catch (error) {
+          console.error(error);
+          alert("Erro ao mintar: " + (error.message || error));
+        }
+      }
+    </script>
+  </body>
 </html>
