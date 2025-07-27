@@ -1,23 +1,19 @@
-# 🏕️ Camp Badge Minter
+# Camp xMinto 🎖️
 
-Projeto desenvolvido para a **WIZZ x CAMP $5,000 Builder Bounty** com foco na criação de um dApp de mint de badge utilizando o Origin SDK da Camp Network.
+Projeto criado para a WIZZ x CAMP $5,000 Builder Bounty
 
-🎯 **Resumo**  
-Permite que qualquer usuário mint um NFT (ERC-1155) simbólico da comunidade CAMP por apenas **0.0001 ETH**, na **rede Sepolia**.
+Mint de badges on-chain usando o Origin SDK da Camp Network.
 
-🌐 **Link do dApp:**  
-https://camp-badge-minter-clean-xq2o.vercel.app/
+🚀 Link do dApp  
+https://camp-xminto.vercel.app/
 
-🧪 **Tecnologias utilizadas:**
-- Origin SDK (Camp Network)
-- Solidity (ERC-1155)
-- Ethereum Sepolia Testnet
-- HTML + JavaScript (Ethers.js)
-- Deploy via Vercel
+💻 Tecnologias  
+• Origin SDK  
+• Solidity (ERC-1155)  
+• Frontend: HTML/JS  
+• Deploy: Basecamp Testnet
 
-🎯 **Objetivo do projeto**  
-Explorar a criação de identidade on-chain com um minter simples e funcional, promovendo a cultura maker da Camp Network com uso de badges como elementos simbólicos de participação.
+🧠 Objetivo  
+Mostrar como qualquer usuário pode mintar seu NFT de forma simples e acessível, promovendo a identidade on-chain entre builders da Camp Network.
 
----
-
-🛠️ Feito com ❤️ por [@solanoas85](https://github.com/solanoas85)
+Feito com ❤️ por [solanoas85](https://github.com/solanoas85)
