@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
+    <meta charset="UTF-8" />
     <title>Camp Badge Minter</title>
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-image: url('23.png');
+        margin: 0;
+        padding: 0;
+        background: url("23.png") no-repeat center center fixed;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        text-align: center;
-        padding: 50px;
+        font-family: Arial, sans-serif;
         color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
       }
 
-      h1, p {
-        text-shadow: 1px 1px 5px black;
+      h1 {
+        font-size: 40px;
+        text-shadow: 2px 2px 4px #000;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        text-shadow: 1px 1px 3px #000;
+        margin-bottom: 25px;
       }
 
       button {
         padding: 15px 30px;
         font-size: 18px;
-        cursor: pointer;
         background-color: #2e7d32;
         color: white;
         border: none;
         border-radius: 8px;
-        box-shadow: 2px 2px 8px black;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      button:hover {
+        background-color: #1b5e20;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 14px;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
       }
     </style>
   </head>
@@ -37,15 +61,19 @@
     <p>Conecte sua carteira e clique no botão para mintar seu badge!</p>
     <button onclick="mintBadge()">Claim Badge</button>
 
+    <div class="footer">
+      Projeto construído por @solanoas para o WIZZ x CAMP Builder Bounty.
+    </div>
+
     <script>
       const contractAddress = "0x2c2323218e6b194995582B90027Bd8474606d66F";
       const abi = [
         {
-          "inputs": [],
-          "name": "mint",
-          "outputs": [],
-          "stateMutability": "payable",
-          "type": "function"
+          inputs: [],
+          name: "mint",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function"
         }
       ];
 
